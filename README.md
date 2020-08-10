@@ -1,3 +1,13 @@
+## Test
+Hi there,
+To proceed to the next stage of the recruitment, you are required to perform the following task
+1. Using https://jsonplaceholder.typicode.com/, consume the posts resource
+What to do: There are 100 post records. On the initial page load, display just 10 records. Then 10 more records should keep loading per page scroll every time user reaches the page bottom until there is nothing left to load.
+2. Make a video demonstrating what you have just done
+3. Push your codes to git 
+
+ And finally send the video and your git repository link
+Note. The above task should be completed and submitted in not greater than 24 hours
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
