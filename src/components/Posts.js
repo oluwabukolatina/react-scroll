@@ -12,9 +12,6 @@ const Posts = ({posts}) => {
 
     return (
         <div className="posts-container">
-            {/* {loading ? ( */}
-                {/* <small>loading</small> */}
-            {/* ) : */}
              {displayPosts()}
         </div>
     );

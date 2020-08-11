@@ -25,5 +25,16 @@ export const usePosts = () => {
         const indexOfFirstPost = indexOfLastPost - perPage;
         setCurrentPost(currentPost.concat(posts.slice(indexOfFirstPost, indexOfLastPost)))
     };
-    return {posts, currentPost, currentPage, perPage, loading, getPosts}
+    const getPost = (param) => {
+        if (currentPost.length >= posts.length) {
+            setLoading(false)
+            return;
+        }
+        setCurrentPage(param)
+        const indexOfLastPost = param * perPage;
+        const indexOfFirstPost = indexOfLastPost - perPage;
+        setCurrentPost(currentPost.concat(posts.slice(indexOfFirstPost, indexOfLastPost)))
+        console.log(currentPost.concat(posts.slice(indexOfFirstPost, indexOfLastPost)))
+    }
+    return {posts, currentPost, currentPage, perPage, loading, getPosts, getPost}
 }
