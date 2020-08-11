@@ -4,7 +4,7 @@ import Posts from "./components/Posts";
 import InfiniteScroll from 'react-infinite-scroll-component';
 import {usePosts} from "./hooks/usePosts";
 function App() {
-  const {currentPost, getPost, currentPage, loading} = usePosts();
+  const {currentPost, getPost, currentPage, posts} = usePosts();
   const getMore = () => {
     getPost(currentPage + 1);
       
@@ -15,10 +15,15 @@ function App() {
         Scroll
       </p>
       <InfiniteScroll
-          dataLength={currentPost.length}
-          next={getMore}
-          hasMore={true}
-          loader={<h4>loading</h4>}
+        dataLength={currentPost.length}
+        next={getMore}
+          hasMore={currentPost.length >= posts.length ? false : true}
+          loader={<h4>Loading...</h4>}
+          endMessage={
+            <p style={{ textAlign: "center" }}>
+              <b>Thats all!</b>
+            </p>
+          }
       >
       <Posts posts={currentPost}/>
       </InfiniteScroll>

@@ -11,9 +11,10 @@
   padding-left: 1em;
   padding-right: 1em;
   border: 1px solid gray;
-  padding-bottom: 1em;
+  padding-bottom: 3em;
   margin-bottom: 1em;
   font-family: 'Roboto Condensed', sans-serif;
+  padding-top: 3em;;
 }
 .post-name{
   text-align: center;
