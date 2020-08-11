@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Posts = ({posts, loading}) => {
+const Posts = ({posts}) => {
     const displayPosts = () => {
        return posts.map((post) => (
             <div className="post" key={post.id}>
@@ -12,9 +12,10 @@ const Posts = ({posts, loading}) => {
 
     return (
         <div className="posts-container">
-            {loading ? (
-                <small>loading</small>
-            ) : displayPosts()}
+            {/* {loading ? ( */}
+                {/* <small>loading</small> */}
+            {/* ) : */}
+             {displayPosts()}
         </div>
     );
 };
