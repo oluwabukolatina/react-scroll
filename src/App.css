@@ -3,7 +3,7 @@
   margin-right: 3em;
   margin-top: 1em;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns:repeat(3, 1fr);
   grid-column-gap: 2em;
 }
 .post{
@@ -20,4 +20,16 @@
   font-size: 22px;
   font-weight: 500;
   color: #609;
+}
+@media (max-width: 425px) {
+  .posts-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 425px) {
+  .posts-container{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
